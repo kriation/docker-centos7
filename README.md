@@ -1,5 +1,5 @@
 # CentOS v7
-This is a Centos 7 image derived from the official centos:centos7.
+This is a CentOS v7 image derived from the official centos:centos7.
 It simply calls yum update and cleans up after itself during deployment. 
 No additional packages are installed.
 
