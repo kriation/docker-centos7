@@ -1,6 +1,7 @@
 # CentOS v7
 This is a CentOS v7 image derived from the official centos:centos7.
 
-I couldn't find a CentOS image in the repository that was close to the 
-base size (~224MB) to use as a foundation for other images. 
-After the update, and the cleanup, this image is ~239MB.
+The only change to this image is that it calls yum update at image buid time,
+and then cleans up after itself.
+
+Image size reported by docker cli is 278MB.
