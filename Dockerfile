@@ -8,5 +8,4 @@ LABEL org.opencontainers.image.created=$BUILD_DATE
 LABEL org.opencontainers.image.vendor=""
 
 # Enable non-interactive installation by yum and update
-RUN sed -i 's/^\[main\]/\[main\]\nassumeyes = 1/' /etc/yum.conf\
-	&& yum update && yum clean all && rm -rf /var/cache/yum
+RUN yum -y update && yum -y clean packages
