@@ -9,7 +9,6 @@ LABEL org.opencontainers.image.vendor=""
 
 # Set up docker-entrypoint.d
 COPY /docker-entrypoint.sh /
-ONBUILD COPY docker-entrypoint.d /docker-entrypoint.d
 
 # Enable non-interactive installation by yum and update
 RUN yum -y update && yum -y install crontabs && yum -y clean packages
