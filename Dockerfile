@@ -1,10 +1,8 @@
 FROM centos:centos7 as build
-
 # Enable non-interactive installation by yum and update
 RUN yum -y update && yum -y install crontabs && yum -y clean packages
 
 FROM build as publish
-
 ARG BUILD_DATE
 LABEL maintainer="armen@kriation.com"
 LABEL org.label-schema.build-date="$BUILD_DATE"
